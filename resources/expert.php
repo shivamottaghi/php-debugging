@@ -39,3 +39,15 @@ print_r($week);
 
 
 new_exercise(5);
+// The array should be printing every letter of the alfabet (a-z) but instead it does that + aa-yz
+// Fix the code so the for loop only pushes a-z in the array
+
+$arr = [];
+for ($letter = 'a'; $letter != 'aa'; $letter++) {
+    array_push($arr, $letter);
+}
+
+print_r($arr); // Array ([0] => a, [1] => b, [2] => c, ...) a-z alfabetical array
+
+
+new_exercise(6);
