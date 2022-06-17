@@ -21,10 +21,21 @@ echo $monday;
 
 new_exercise(3);
 
-$str = "\"Debugged !\" Also very fun";
-echo substr($str, 0, 12);
+$str = "Debugged ! Also very fun";
+echo substr($str, 0, 10);
 
 
 
 
 new_exercise(4);
+
+foreach($week as $day) {
+    $day = substr($day, 0, -3);
+}
+
+print_r($week);
+
+
+
+
+new_exercise(5);
