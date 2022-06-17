@@ -22,7 +22,7 @@ echo $monday;
 new_exercise(3);
 
 $str = "Debugged ! Also very fun";
-echo substr($str, 0, 10);
+echo '"'.substr($str, 0, 10).'"';
 
 
 
