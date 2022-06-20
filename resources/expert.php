@@ -90,3 +90,10 @@ echo "Here is the name: " ;
 echo combineNames();
 
 new_exercise(7);
+function copyright($year) {
+    echo "&copy; $year BeCode";
+}
+//print the copyright
+copyright(date('Y'));
+
+new_exercise(8);
