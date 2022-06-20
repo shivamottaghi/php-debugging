@@ -64,7 +64,7 @@ function combineNames($str1 = "", $str2 = "") {
             $param = randomHeroName();
         }
     }
-    echo implode(" - ",$params);
+    return implode(" - ",$params);
 }
 
 
@@ -86,8 +86,7 @@ function randomHeroName()
     return $randname;
 }
 
-echo "Here is the name: " ;
-echo combineNames();
+echo "Here is the name: " . combineNames();
 
 new_exercise(7);
 function copyright($year) {
@@ -115,3 +114,26 @@ echo login('wrong@example.be', 'wrong');
 //you can change things again!
 
 new_exercise(9);
+
+function isLinkValid(string $link) {
+    $unacceptables = array('https:','.doc','.pdf', '.jpg', '.jpeg', '.gif', '.bmp', '.png');
+
+    foreach ($unacceptables as $unacceptable) {
+        if (strpos($link, $unacceptable) !== false) {
+            return 'Unacceptable Found<br />';
+        }
+    }
+    return 'Acceptable<br />';
+}
+//invalid link
+echo isLinkValid('http://www.google.com/hack.pdf');
+//invalid link
+echo isLinkValid('https://google.com');
+//VALID link
+echo isLinkValid('http://google.com');
+//VALID link
+echo isLinkValid('http://google.com/test.txt');
+
+
+new_exercise(10);
+
